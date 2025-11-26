@@ -92,12 +92,14 @@
             <h1 class="text-4xl md:text-7xl text-white italic leading-tight">
                 <span id="displayName" class="border-b-2 border-yellow-600 pb-1 break-words"></span>
             </h1>
-            <p class="mt-4 md:mt-6 text-gray-400 max-w-xl mx-auto font-light text-sm md:text-base px-2">
-                "Life is not measured by the number of breaths we take, but by the moments that take our breath away."
+            
+            <p class="mt-4 md:mt-6 text-gray-300 max-w-xl mx-auto font-light text-sm md:text-lg px-2 italic">
+                "In you, I’ve found the love of my life and my closest, truest friend."
             </p>
 
             <div class="mt-10 fade-in-up" style="animation-delay: 0.3s;">
-                <p class="text-gray-400 text-sm uppercase tracking-widest mb-4">We have been together for</p>
+                <p class="text-gray-500 text-xs md:text-sm uppercase tracking-widest mb-4">We have been together for</p>
+                
                 <div class="flex flex-wrap justify-center gap-3 md:gap-6">
                     <div class="bg-white/5 border border-yellow-500/20 p-3 md:p-4 rounded-lg min-w-[80px] md:min-w-[100px] backdrop-blur-sm">
                         <span id="years" class="block text-2xl md:text-4xl font-bold text-yellow-500 fancy-text">0</span>
@@ -129,7 +131,15 @@
                     </div>
                 </div>
             </div>
+            <div class="mt-12 mb-2 fade-in-up" style="animation-delay: 0.5s;">
+                <div class="h-px w-24 bg-yellow-600/50 mx-auto mb-6"></div>
+                <p class="text-white/90 text-lg md:text-xl max-w-2xl mx-auto font-serif italic leading-relaxed">
+                    "I didn't fall in love with you. I walked into love with you, with my eyes wide open..."
+                </p>
+                <div class="h-px w-24 bg-yellow-600/50 mx-auto mt-6"></div>
             </div>
+
+        </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-12 pb-20">
             <div class="bg-white p-3 md:p-4 pb-12 md:pb-16 shadow-2xl transform rotate-left rotate-none-hover transition duration-500 cursor-pointer fade-in-up" style="animation-delay: 0.4s;">
@@ -190,7 +200,7 @@
                 </div>
             </div>
 
-            <div class="bg-white p-3 md:p-4 pb-12 md:pb-16 shadow-2xl transform -rotate-2 rotate-none-hover transition duration-500 cursor-pointer fade-in-up" style="animation-delay: 2.2s;">
+             <div class="bg-white p-3 md:p-4 pb-12 md:pb-16 shadow-2xl transform -rotate-2 rotate-none-hover transition duration-500 cursor-pointer fade-in-up" style="animation-delay: 2.2s;">
                 <div class="overflow-hidden bg-gray-200 h-56 md:h-64">
                     <img src="./image/10.jpg" class="w-full h-full object-cover filter sepia-[.3] hover:sepia-0 transition">
                 </div>
@@ -204,39 +214,29 @@
         // ==========================================
         //  CHANGE YOUR START DATE HERE
         // ==========================================
-        // Format: Year, Month (0-11), Day
-        // Example: December 25, 2023 would be: new Date(2023, 11, 25)
-        // Note: Months count from 0 (Jan is 0, Dec is 11)
-        const startDate = new Date(2025, 3, 9); // Currently set to Jan 1, 2024
+        const startDate = new Date(2025, 3, 9); // Currently set to Apr 9, 2025
         // ==========================================
 
         function updateTimer() {
             const now = new Date();
-            
             let years = now.getFullYear() - startDate.getFullYear();
             let months = now.getMonth() - startDate.getMonth();
             let days = now.getDate() - startDate.getDate();
             
-            // Adjust for negative days (borrow from previous month)
             if (days < 0) {
                 months--;
-                // Get days in the previous month
                 const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
                 days += prevMonth.getDate();
             }
-
-            // Adjust for negative months (borrow from previous year)
             if (months < 0) {
                 years--;
                 months += 12;
             }
 
-            // Calculate Time (Hours, Mins, Secs)
             const hours = now.getHours();
             const minutes = now.getMinutes();
             const seconds = now.getSeconds();
 
-            // Update HTML
             document.getElementById('years').innerText = years;
             document.getElementById('months').innerText = months;
             document.getElementById('days').innerText = days;
@@ -245,9 +245,8 @@
             document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
         }
 
-        // Start the timer immediately
         setInterval(updateTimer, 1000);
-        updateTimer(); // Run once immediately
+        updateTimer();
 
         function revealSurprise() {
             const nameInput = document.getElementById('nameInput');
@@ -273,7 +272,7 @@
             }, 1000);
 
             // Play Music
-            music.volume = 0.5; // Adjusted volume
+            music.volume = 0.5;
             music.play().catch(console.error);
 
             // Gold and Silver Confetti
