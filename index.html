@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Special Moment</title>
+    <title>Been Love Memory R & M</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
@@ -56,7 +56,7 @@
 <body class="min-h-screen flex flex-col items-center relative overflow-x-hidden bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]">
 
     <audio id="bgMusic" loop>
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+        <source src="./image/song.mp3" type="audio/mpeg">
     </audio>
 
     <div id="introScreen" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-neutral-900 text-center px-4 transition-all duration-1000">
@@ -95,71 +95,104 @@
             <p class="mt-4 md:mt-6 text-gray-400 max-w-xl mx-auto font-light text-sm md:text-base px-2">
                 "Life is not measured by the number of breaths we take, but by the moments that take our breath away."
             </p>
-        </div>
+
+            <div class="mt-10 fade-in-up" style="animation-delay: 0.3s;">
+                <p class="text-gray-400 text-sm uppercase tracking-widest mb-4">We have been together for</p>
+                <div class="flex flex-wrap justify-center gap-3 md:gap-6">
+                    <div class="bg-white/5 border border-yellow-500/20 p-3 md:p-4 rounded-lg min-w-[80px] md:min-w-[100px] backdrop-blur-sm">
+                        <span id="years" class="block text-2xl md:text-4xl font-bold text-yellow-500 fancy-text">0</span>
+                        <span class="text-xs md:text-sm text-gray-400 uppercase">Years</span>
+                    </div>
+                    <div class="bg-white/5 border border-yellow-500/20 p-3 md:p-4 rounded-lg min-w-[80px] md:min-w-[100px] backdrop-blur-sm">
+                        <span id="months" class="block text-2xl md:text-4xl font-bold text-yellow-500 fancy-text">0</span>
+                        <span class="text-xs md:text-sm text-gray-400 uppercase">Months</span>
+                    </div>
+                    <div class="bg-white/5 border border-yellow-500/20 p-3 md:p-4 rounded-lg min-w-[80px] md:min-w-[100px] backdrop-blur-sm">
+                        <span id="days" class="block text-2xl md:text-4xl font-bold text-yellow-500 fancy-text">0</span>
+                        <span class="text-xs md:text-sm text-gray-400 uppercase">Days</span>
+                    </div>
+                </div>
+                <div class="flex flex-wrap justify-center gap-2 md:gap-4 mt-3">
+                    <div class="text-center">
+                        <span id="hours" class="font-bold text-white text-lg md:text-xl">00</span>
+                        <span class="text-[10px] md:text-xs text-gray-500 uppercase">Hr</span>
+                    </div>
+                    <span class="text-yellow-500 text-xl md:text-2xl">:</span>
+                    <div class="text-center">
+                        <span id="minutes" class="font-bold text-white text-lg md:text-xl">00</span>
+                        <span class="text-[10px] md:text-xs text-gray-500 uppercase">Min</span>
+                    </div>
+                    <span class="text-yellow-500 text-xl md:text-2xl">:</span>
+                    <div class="text-center">
+                        <span id="seconds" class="font-bold text-white text-lg md:text-xl">00</span>
+                        <span class="text-[10px] md:text-xs text-gray-500 uppercase">Sec</span>
+                    </div>
+                </div>
+            </div>
+            </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-12 pb-20">
-            
             <div class="bg-white p-3 md:p-4 pb-12 md:pb-16 shadow-2xl transform rotate-left rotate-none-hover transition duration-500 cursor-pointer fade-in-up" style="animation-delay: 0.4s;">
                 <div class="overflow-hidden bg-gray-200 h-56 md:h-64">
-                    <img src="https://picsum.photos/400/600?random=11" class="w-full h-full object-cover filter sepia-[.3] hover:sepia-0 transition">
+                    <img src="./image/1.jpg" class="w-full h-full object-cover filter sepia-[.3] hover:sepia-0 transition">
                 </div>
                 <div class="text-gray-800 text-center mt-4 font-handwriting font-bold text-lg md:text-xl handwriting-font">The Beginning</div>
             </div>
-
+            
             <div class="bg-white p-3 md:p-4 pb-12 md:pb-16 shadow-2xl transform rotate-right rotate-none-hover transition duration-500 cursor-pointer fade-in-up" style="animation-delay: 0.6s;">
                 <div class="overflow-hidden bg-gray-200 h-56 md:h-64">
-                    <img src="https://picsum.photos/400/600?random=12" class="w-full h-full object-cover filter sepia-[.3] hover:sepia-0 transition">
+                    <img src="./image/2.jpg" class="w-full h-full object-cover filter sepia-[.3] hover:sepia-0 transition">
                 </div>
                 <div class="text-gray-800 text-center mt-4 font-handwriting font-bold text-lg md:text-xl handwriting-font">Good Times</div>
             </div>
 
             <div class="bg-white p-3 md:p-4 pb-12 md:pb-16 shadow-2xl transform -rotate-2 rotate-none-hover transition duration-500 cursor-pointer fade-in-up" style="animation-delay: 0.8s;">
                 <div class="overflow-hidden bg-gray-200 h-56 md:h-64">
-                    <img src="https://picsum.photos/400/600?random=13" class="w-full h-full object-cover filter sepia-[.3] hover:sepia-0 transition">
+                    <img src="./image/3.jpg" class="w-full h-full object-cover filter sepia-[.3] hover:sepia-0 transition">
                 </div>
                 <div class="text-gray-800 text-center mt-4 font-handwriting font-bold text-lg md:text-xl handwriting-font">Unforgettable</div>
             </div>
 
             <div class="bg-white p-3 md:p-4 pb-12 md:pb-16 shadow-2xl transform rotate-3 rotate-none-hover transition duration-500 cursor-pointer fade-in-up" style="animation-delay: 1.0s;">
                 <div class="overflow-hidden bg-gray-200 h-56 md:h-64">
-                    <img src="https://picsum.photos/400/600?random=14" class="w-full h-full object-cover filter sepia-[.3] hover:sepia-0 transition">
+                    <img src="./image/4.jpg" class="w-full h-full object-cover filter sepia-[.3] hover:sepia-0 transition">
                 </div>
                 <div class="text-gray-800 text-center mt-4 font-handwriting font-bold text-lg md:text-xl handwriting-font">Adventure</div>
             </div>
 
             <div class="bg-white p-3 md:p-4 pb-12 md:pb-16 shadow-2xl transform rotate-left rotate-none-hover transition duration-500 cursor-pointer fade-in-up" style="animation-delay: 1.2s;">
                 <div class="overflow-hidden bg-gray-200 h-56 md:h-64">
-                    <img src="https://picsum.photos/400/600?random=15" class="w-full h-full object-cover filter sepia-[.3] hover:sepia-0 transition">
+                    <img src="./image/5.jpg" class="w-full h-full object-cover filter sepia-[.3] hover:sepia-0 transition">
                 </div>
             </div>
 
             <div class="bg-white p-3 md:p-4 pb-12 md:pb-16 shadow-2xl transform rotate-right rotate-none-hover transition duration-500 cursor-pointer fade-in-up" style="animation-delay: 1.4s;">
                 <div class="overflow-hidden bg-gray-200 h-56 md:h-64">
-                    <img src="https://picsum.photos/400/600?random=16" class="w-full h-full object-cover filter sepia-[.3] hover:sepia-0 transition">
+                    <img src="./image/6.jpg" class="w-full h-full object-cover filter sepia-[.3] hover:sepia-0 transition">
                 </div>
             </div>
             
             <div class="bg-white p-3 md:p-4 pb-12 md:pb-16 shadow-2xl transform rotate-1 rotate-none-hover transition duration-500 cursor-pointer fade-in-up" style="animation-delay: 1.6s;">
                 <div class="overflow-hidden bg-gray-200 h-56 md:h-64">
-                    <img src="https://picsum.photos/400/600?random=17" class="w-full h-full object-cover filter sepia-[.3] hover:sepia-0 transition">
+                    <img src="./image/7.jpg" class="w-full h-full object-cover filter sepia-[.3] hover:sepia-0 transition">
                 </div>
             </div>
 
             <div class="bg-white p-3 md:p-4 pb-12 md:pb-16 shadow-2xl transform -rotate-1 rotate-none-hover transition duration-500 cursor-pointer fade-in-up" style="animation-delay: 1.8s;">
                 <div class="overflow-hidden bg-gray-200 h-56 md:h-64">
-                    <img src="https://picsum.photos/400/600?random=18" class="w-full h-full object-cover filter sepia-[.3] hover:sepia-0 transition">
+                    <img src="./image/8.jpg" class="w-full h-full object-cover filter sepia-[.3] hover:sepia-0 transition">
                 </div>
             </div>
 
             <div class="bg-white p-3 md:p-4 pb-12 md:pb-16 shadow-2xl transform rotate-2 rotate-none-hover transition duration-500 cursor-pointer fade-in-up" style="animation-delay: 2.0s;">
                 <div class="overflow-hidden bg-gray-200 h-56 md:h-64">
-                    <img src="https://picsum.photos/400/600?random=19" class="w-full h-full object-cover filter sepia-[.3] hover:sepia-0 transition">
+                    <img src="./image/9.jpg" class="w-full h-full object-cover filter sepia-[.3] hover:sepia-0 transition">
                 </div>
             </div>
 
-             <div class="bg-white p-3 md:p-4 pb-12 md:pb-16 shadow-2xl transform -rotate-2 rotate-none-hover transition duration-500 cursor-pointer fade-in-up" style="animation-delay: 2.2s;">
+            <div class="bg-white p-3 md:p-4 pb-12 md:pb-16 shadow-2xl transform -rotate-2 rotate-none-hover transition duration-500 cursor-pointer fade-in-up" style="animation-delay: 2.2s;">
                 <div class="overflow-hidden bg-gray-200 h-56 md:h-64">
-                    <img src="https://picsum.photos/400/600?random=20" class="w-full h-full object-cover filter sepia-[.3] hover:sepia-0 transition">
+                    <img src="./image/10.jpg" class="w-full h-full object-cover filter sepia-[.3] hover:sepia-0 transition">
                 </div>
                 <div class="text-gray-800 text-center mt-4 font-handwriting font-bold text-lg md:text-xl handwriting-font">Forever</div>
             </div>
@@ -168,6 +201,54 @@
     </div>
 
     <script>
+        // ==========================================
+        //  CHANGE YOUR START DATE HERE
+        // ==========================================
+        // Format: Year, Month (0-11), Day
+        // Example: December 25, 2023 would be: new Date(2023, 11, 25)
+        // Note: Months count from 0 (Jan is 0, Dec is 11)
+        const startDate = new Date(2025, 3, 9); // Currently set to Jan 1, 2024
+        // ==========================================
+
+        function updateTimer() {
+            const now = new Date();
+            
+            let years = now.getFullYear() - startDate.getFullYear();
+            let months = now.getMonth() - startDate.getMonth();
+            let days = now.getDate() - startDate.getDate();
+            
+            // Adjust for negative days (borrow from previous month)
+            if (days < 0) {
+                months--;
+                // Get days in the previous month
+                const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+                days += prevMonth.getDate();
+            }
+
+            // Adjust for negative months (borrow from previous year)
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+
+            // Calculate Time (Hours, Mins, Secs)
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+
+            // Update HTML
+            document.getElementById('years').innerText = years;
+            document.getElementById('months').innerText = months;
+            document.getElementById('days').innerText = days;
+            document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+        }
+
+        // Start the timer immediately
+        setInterval(updateTimer, 1000);
+        updateTimer(); // Run once immediately
+
         function revealSurprise() {
             const nameInput = document.getElementById('nameInput');
             const name = nameInput.value.trim();
@@ -192,7 +273,7 @@
             }, 1000);
 
             // Play Music
-            music.volume = 0.5;
+            music.volume = 0.5; // Adjusted volume
             music.play().catch(console.error);
 
             // Gold and Silver Confetti
